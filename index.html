@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MiTRA Demo Logistics Pvt Ltd.</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+    .video-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+        /* 16:9 aspect ratio */
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        /* Removes any border */
+    }
+
+    .hide {
+        display: none;
+        /* Hides any unwanted elements */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .background {
+        height: 50vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .road {
+        height: 200px;
+        width: 500%;
+        background-image: url('video/road.jpeg');
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background-repeat: repeat-x;
+        animation: road 20s linear infinite;
+    }
+
+    @keyframes road {
+        100% {
+            transform: translateX(-3400px);
+        }
+    }
+
+    .city {
+        height: 200px;
+        width: 500%;
+        background-image: url('video/cITYBANK.png');
+        position: absolute;
+        bottom: 200px;
+        left: 0;
+        z-index: 1;
+        background-repeat: repeat-x;
+        animation: city 20s linear infinite;
+    }
+
+    @keyframes city {
+        100% {
+            transform: translateX(-1400px);
+        }
+    }
+
+    .truck {
+        width: 700px;
+        position: absolute;
+        bottom: 80px;
+        z-index: 2;
+    }
+
+    .truck-left {
+        right: 1px;
+        animation: truckMoveLeft 7s linear infinite;
+    }
+
+    @keyframes truckMoveLeft {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-300%);
+        }
+    }
+
+    .truck-right {
+        left: 1px;
+        animation: truckMoveRight 7s linear infinite;
+    }
+
+    @keyframes truckMoveRight {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(300%);
+        }
+    }
+
+    /* Airplane Styles */
+    .airplane {
+        width: 70px;
+        position: absolute;
+        top: 12px;
+        animation: flyFromLeft 15s linear infinite;
+        z-index: 3;
+    }
+
+    @keyframes flyFromLeft {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        20% {
+            transform: translateX(10vw) rotate(5deg);
+            /* Slight upward tilt */
+        }
+
+        40% {
+            transform: translateX(30vw) rotate(0deg);
+            /* Level flight */
+        }
+
+        60% {
+            transform: translateX(50vw) translateY(-20px) rotate(-5deg);
+            /* Ascend slightly */
+        }
+
+        80% {
+            transform: translateX(70vw) translateY(10px) rotate(0deg);
+            /* Level flight */
+        }
+
+        100% {
+            transform: translateX(100vw);
+            /* Fly off-screen to the right */
+        }
+    }
+</style>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+91 8108051356</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>info@themitrademologistic.in</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="https://www.facebook.com/">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://x.com/i/flow/login">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://www.linkedin.com/login">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <img src="img/THE MITRA SOLUTIONS.jpeg" width="199" height="49" alt="logo">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-0">
+                    <a href="index.html" class="nav-item nav-link ">HOME</a>
+                    <a href="about-us.html" class="nav-item nav-link">ABOUT US</a>
+                    <div class="nav-item dropdown">
+                        <a href="service.html" class="nav-link dropdown-toggle" data-toggle="dropdown">SERVICES</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="allservice.html" class="dropdown-item">All Services</a>
+                            <a href="warehousing.html" class="dropdown-item">Warehousing & Distribution</a>
+                            <a href="cfs.html" class="dropdown-item">CFS</a>
+                            <a href="surfacetran.html" class="dropdown-item">Surface Transportation</a>
+                            <a href="multitran.html" class="dropdown-item">Multimodal Transportation</a>
+                            <a href="procargoheavylift.html" class="dropdown-item">Project Cargo / Heavy Lift</a>
+                            <a href="containerstorage.html" class="dropdown-item">Domesticated Container Storage</a>
+                            <a href="frozencargo.html" class="dropdown-item">Perishable & Frozen Cargo</a>
+                            <a href="logisticsolution.html" class="dropdown-item">Logistics Solutions</a>
+                            <a href="3pl.html" class="dropdown-item">3PL</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="valueaddedinfo.html" class="nav-link dropdown-toggle " data-toggle="dropdown">VALUE
+                            ADDED INFO</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="pdf/Tracking.pdf" class="dropdown-item" target="_blank">Tracking</a>
+                            <a href="pdf/Tariff.pdf" class="dropdown-item" target="_blank">Tariff</a>
+                            <a href="pdf/einvoice.html" class="dropdown-item" target="_blank">E-Invoice</a>
+                        </div>
+                    </div>
+                    <a href="career.html" class="nav-item nav-link">CAREER</a>
+                    <a href="contactus.html" class="nav-item nav-link">CONTACT US</a>
+                </div>
+                <a href="contactus.html" class="btn btn-warning py-2 px-4 d-none d-lg-block">Get A Quote</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="background">
+        <div class="road"></div>
+        <div class="city"></div>
+
+        <!-- Truck 1 (left to right) -->
+        <div class="truck truck-right" style="animation-delay: 1s;">
+            <img src="video/LEFT1.png" alt="Truck" style="width: 100%;">
+        </div>
+        <!-- Truck 2 (left to right) -->
+        <div class="truck truck-right" style="animation-delay: -4s;">
+            <img src="video/LEFT2.png" alt="Truck" style="width: 100%;">
+        </div>
+
+        <!-- Truck 2 (right to left) -->
+        <div class="truck truck-left" style="animation-delay: 1s;">
+            <img src="video/TRUCK22.png" alt="Truck" style="width: 100%;">
+        </div>
+
+        <!-- Truck 3 (right to left) -->
+        <div class="truck truck-left" style="animation-delay: -1s;">
+            <img src="video/TRUCK22.png" alt="Truck" style="width: 100%;">
+        </div>
+        <!-- Truck 4 (right to left) -->
+        <div class="truck truck-left" style="animation-delay: -4s;">
+            <img src="video/RIGHT4.png" alt="Truck" style="width: 100%;">
+        </div>
+
+        <!-- Airplane 1 -->
+        <div class="airplane" style="animation-delay: 0s;">
+            <img src="video/AIROPLANE2.png" alt="Airplane" style="width: 450%;">
+        </div>
+
+        <!-- Airplane 2 -->
+        <div class="airplane" style="animation-delay: -4s;">
+            <img src="video/AIROPLANE2.png" alt="Airplane" style="width: 450%;">
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-1">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <video width="100%" height="400" autoplay muted loop style="display: block; border: none;">
+                        <source src="img/vecteezy.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-lg-7">
+                    <h5 class="text-warning text-uppercase font-weight-bold">About Us</h5>
+                    <h1 class="mb-3">Mitra Demo Logistics Provider</h1>
+                    <h4 class="mb-2">Established in Year 2005, MiTRA Demo Logistics Pvt Ltd is one of the best logistic
+                        companies in India.</h4>
+                    <p class="mb-3">The years of experiences in the field of cargo handling make Mitra Demo as a leading
+                        CFS Operator & General - Customs Bonded Warehouse Operator with Total Logistics Solution
+                        Provider and Transportation specialist enable Mitra Demo to offer best In-house Cargo Solutions
+                        to the customers.</p>
+
+                    <a href="about-us.html" class="btn btn-warning mb-4">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  Quote Request Start -->
+    <div class="container-fluid bg-secondary my-1">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 py-5 py-lg-0">
+                    <h5 class="text-warning text-uppercase font-weight-bold">Get A Quote</h5>
+                    <h1 class="mb-4">Request A Free Quote</h1>
+                    <p class="mb-4">Hi! I’d like to request a free quote for shipping some type of goods from pickup
+                        location to delivery location. The shipment weighs about weight/volume, and I'm hoping to
+                        have it delivered by desired timeline. Could you please provide me with a quote? Thank you!
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h1 class="text-warning mb-2" data-toggle="counter-up">105</h1>
+                            <h6 class="font-weight-bold mb-4">SKilled Experts</h6>
+                        </div>
+                        <div class="col-sm-4">
+                            <h1 class="text-warning mb-2" data-toggle="counter-up">275</h1>
+                            <h6 class="font-weight-bold mb-4">Happy Clients</h6>
+                        </div>
+                        <div class="col-sm-4">
+                            <h1 class="text-warning mb-2" data-toggle="counter-up">500</h1>
+                            <h6 class="font-weight-bold mb-4">Complete Projects</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-warning py-5 px-4 px-sm-5">
+                        <form class="py-5">
+                            <div class="form-group">
+                                <input type="text" class="form-control border-0 p-4" placeholder="Your Name"
+                                    required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email"
+                                    required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="phonenumber" class="form-control border-0 p-4"
+                                    placeholder="Your Phone Number" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" style="height: 47px;">
+                                    <option selected>Select A Service</option>
+                                    <option value="warehousing">Warehousing</option>
+                                    <option value="cfs">CFS</option>
+                                    <option value="3pl">3PL</option>
+                                    <option value="perishable&frozencargo">Perishable & Frozen Cargo</option>
+                                    <option value="logisticssolutions">Logistics
+                                        Solutions</option>
+                                    <option value="surfacetransportation">Surface Transportation</option>
+                                    <option value="multimodaltransporatation">Multi-modal Transportation</option>
+                                    <option value="proectcargoheavylift">Project Cargo/Heavy Lift</option>
+                                    <option value="domisticatedcontainerstorage">Domisticated Container Storage</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote Request Start -->
+
+    <!-- Features Start -->
+    <div class="container-fluid bg-secondary my-2 position-relative"
+        style="background-image: url('img/background.jpeg'); background-size: cover; background-position: center;">
+        <div class="container position-relative z-index-1">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10 py-5 py-lg-0 text-center"><br>
+                    <h6 class="text-black mb-2 text-uppercase font-weight-bold" style="font-size: 1.5rem;">Why Choose Us
+                    </h6>
+                    <h1 class="mb-3 text-warning">MiTRA Demo Logistics Pvt Ltd., Safe and Trusted Logistics Services
+                    </h1>
+                    <p class="mb-4" style="color: white; text-align: left; margin: 0; padding: 5px; font-size: 1.2rem;">
+                        At MiTRA Demo Logistics Pvt Ltd, we offer safe and reliable logistics services
+                        backed by an experienced team dedicated to delivering your goods on time and in perfect
+                        condition. With transparent pricing and excellent customer support, we ensure a seamless and
+                        stress-free experience for all your shipping needs.
+                    </p>
+
+
+                    <div class="row mt-3">
+                        <div class="col-lg-4 text-center">
+                            <div class="p-4 border bg-light"
+                                style="width: 300px; height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px; box-sizing: border-box;">
+                                <div class="icon-circle"
+                                    style="width: 60px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                    <i class="fas fa-clock text-warning fa-lg"></i>
+                                </div>
+                                <h6 class="text-center">WEEKEND DELIVERY</h6>
+                                <p class="text-center">Offering Saturday and Sunday delivery at no extra cost</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 text-center">
+                            <div class="p-4 border bg-light"
+                                style="width: 300px; height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px; box-sizing: border-box;">
+                                <div class="icon-circle"
+                                    style="width: 60px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                    <i class="far fa-dot-circle text-warning fa-lg"></i>
+                                </div>
+                                <h6 class="text-center">CRANE CAPABILITIES FOR LIFT</h6>
+                                <p class="text-center">For containers that require placement onto truck, flatbeds</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 text-center">
+                            <div class="p-4 border bg-light"
+                                style="width: 300px; height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px; box-sizing: border-box;">
+                                <div class="icon-circle"
+                                    style="width: 60px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                    <i class="far fa-file-alt text-warning fa-lg"></i>
+                                </div>
+                                <h6 class="text-center dark">REMANIFEST SHIPMENTS</h6>
+                                <p class="text-center">Prepare documentation and obtain customs approval</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 text-center">
+                            <div class="p-4 border bg-light"
+                                style="width: 300px; height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px; box-sizing: border-box;">
+                                <div class="icon-circle"
+                                    style="width: 60px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                    <i class="far fa-dot-circle text-warning fa-lg"></i>
+                                </div>
+                                <h6 class="text-center">BONDED CARRIER</h6>
+                                <p class="text-center">Includes a bonded secure yard for storage</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <div class="p-4 border bg-light"
+                                style="width: 300px; height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px; box-sizing: border-box;">
+                                <div class="icon-circle"
+                                    style="width: 60px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                    <i class="far fa-file-alt text-warning fa-lg"></i>
+                                </div>
+                                <h6 class="text-center">CUSTOM REPORT</h6>
+                                <p class="text-center">Information of shipment report will be sent as requested.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <div class="p-4 border bg-light"
+                                style="width: 300px; height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px; box-sizing: border-box;">
+                                <div class="icon-circle"
+                                    style="width: 60px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                    <i class="far fa-dot-circle text-warning fa-lg"></i>
+                                </div>
+                                <h6 class="text-center">SECURE YARD</h6>
+                                <p class="text-center">Shipment protected by security cameras</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+
+
+    <!-- Team Start -->
+    <div class="container-fluid pt-3">
+        <div class="container">
+            <div class="text-center pb-2">
+                <h5 class="text-warning text-uppercase font-weight-bold">Delivery Team</h5>
+                <h1 class="mb-4">Meet Our Delivery Team</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team card position-relative overflow-hidden border-0 mb-5">
+                        <img class="card-img-top" src="img/parvvv.jpeg" alt="parvez">
+                        <div class="card-body text-center p-0">
+                            <div class="team-text d-flex flex-column justify-content-center bg-secondary">
+                                <h5 class="font-weight-bold">SHAIKH PARVEZ ALAM</h5>
+                                <span>General Manager</span>
+                            </div>
+                            <div class="team-social d-flex align-items-center justify-content-center bg-warning">
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://x.com/i/flow/login"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://www.facebook.com/"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://www.linkedin.com/login"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-dark btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team card position-relative overflow-hidden border-0 mb-5">
+                        <img class="card-img-top" src="img/adiiii.jpeg" alt="adarsh">
+                        <div class="card-body text-center p-0">
+                            <div class="team-text d-flex flex-column justify-content-center bg-secondary">
+                                <h5 class="font-weight-bold">ADARSH PINGALE</h5>
+                                <span>Port Manager</span>
+                            </div>
+                            <div class="team-social d-flex align-items-center justify-content-center bg-warning">
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://x.com/i/flow/login"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://www.facebook.com/"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://www.linkedin.com/login"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-dark btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team card position-relative overflow-hidden border-0 mb-5">
+                        <img class="card-img-top" src="img/mauuuu.jpeg" alt="muazzam">
+                        <div class="card-body text-center p-0">
+                            <div class="team-text d-flex flex-column justify-content-center bg-secondary">
+                                <h5 class="font-weight-bold">Muazzam Ali Shaikh</h5>
+                                <span>Crewing Officer</span>
+                            </div>
+                            <div class="team-social d-flex align-items-center justify-content-center bg-warning">
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://x.com/i/flow/login"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://www.facebook.com/"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://www.linkedin.com/login"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-dark btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team card position-relative overflow-hidden border-0 mb-5">
+                        <img class="card-img-top" src="img/dishuuuu.jpeg" alt="dishant">
+                        <div class="card-body text-center p-0">
+                            <div class="team-text d-flex flex-column justify-content-center bg-secondary">
+                                <h5 class="font-weight-bold">Dishant Khatke</h5>
+                                <span>Asst.Crewing Officer</span>
+                            </div>
+                            <div class="team-social d-flex align-items-center justify-content-center bg-warning">
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://x.com/i/flow/login"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://www.facebook.com/"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-dark btn-social mr-2" href="https://www.linkedin.com/login"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-dark btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-2">
+        <div class="container">
+            <div class="text-center pb-2">
+                <h5 class="text-warning text-uppercase font-weight-bold">Testimonial</h5>
+                <h1 class="mb-4">Our Clients Say</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="position-relative bg-secondary p-4">
+                    <i class="fa fa-3x fa-quote-right text-warning position-absolute" style="top: -6px; right: 0;"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonisl-1.jpeg"
+                            style="width: 60px; height: 60px;" alt="">
+                        <div class="ml-3">
+                            <h6 class="font-weight-semi-bold m-0"> Pawan Logistics</h6>
+                            <small>- Profession</small>
+                        </div>
+                    </div>
+                    <p class="m-0">"Also just wanted to say thank you.
+                        Since we've been using you for the majority of our same-day requirements it's been incredible.
+                        No issues and great service so thought I'd pass that feedback on as the team are brilliant....."
+                    </p>
+                </div>
+                <div class="position-relative bg-secondary p-2">
+                    <i class="fa fa-3x fa-quote-right text-warning position-absolute" style="top: -6px; right: 0;"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonisl-2.jpeg"
+                            style="width: 60px; height: 60px;" alt="">
+                        <div class="ml-3">
+                            <h6 class="font-weight-semi-bold m-0">HP Logistics</h6>
+                            <small>- Profession</small>
+                        </div>
+                    </div>
+                    <p class="m-0">We thank you for the premium quality service provided by the Delhi team of Snowman.
+                        We sincerely appreciate your efficient and time-bound customer service. We always have and will
+                        continue to recommend your services to other companies and contacts. Looking forward to
+                        continuing this relationship......</p>
+                </div>
+                <div class="position-relative bg-secondary p-1">
+                    <i class="fa fa-3x fa-quote-right text-warning position-absolute" style="top: -6px; right: 0;"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonisl-3.jpeg"
+                            style="width: 60px; height: 60px;" alt="">
+                        <div class="ml-3">
+                            <h6 class="font-weight-semi-bold m-0">Snowman Logistics</h6>
+                            <small>- Profession</small>
+                        </div>
+                    </div>
+                    <p class="m-0">Dear Snowman Logistics, we appreciate the quality of service you provide. Your
+                        efficient, time-bound services across all locations have been exemplary. We have and will
+                        continue to recommend your services to other companies and contacts. Our team is satisfied with
+                        your work, and we look forward to continuing this relationship.........</p>
+                </div>
+                <div class="position-relative bg-secondary p-2">
+                    <i class="fa fa-3x fa-quote-right text-warning position-absolute" style="top: -6px; right: 0;"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid rounded-circle" src="img/testimonisl-4.jpeg"
+                            style="width: 60px; height: 60px;" alt="">
+                        <div class="ml-3">
+                            <h6 class="font-weight-semi-bold m-0">SmallSK Logistics</h6>
+                            <small>- Profession</small>
+                        </div>
+                    </div>
+                    <p class="m-0">We thank you for the premium quality service provided by the Delhi team of Snowman.
+                        We sincerely appreciate your efficient and time-bound customer service. We always have and will
+                        continue to recommend your services to other companies and contacts. Looking forward to
+                        continuing this relationship.......</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-2 py-2 px-sm-2 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-6">
+                <div class="row">
+                    <div class="col-md-5 mb-5">
+                        <h3 class="text-warning mb-4">Contact us</h3>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Office No.1002, 10th floor, Mayuresh Chambers
+                            Premises Co-operative Society Limited, Plot No. 60, Sector-11, CBD Belapur, Navi Mumbai Tal.
+                            & Dist. Thane 400614</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+91 8108051356</p>
+                        <p><i class="fa fa-envelope mr-2"></i>info@themitrademologistic.in</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-social mr-2" href="https://x.com/i/flow/login"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="https://www.facebook.com/"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="https://www.linkedin.com/login"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5">
+                        <h3 class="text-warning mb-4">General</h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="about-us.html"><i class="fa fa-angle-right mr-2"></i>About
+                                Us</a>
+                            <a class="text-white mb-2" href="allservice.html"><i
+                                    class="fa fa-angle-right mr-2"></i>Services</a>
+                            <a class="text-white" href="contactus.html"><i class="fa fa-angle-right mr-2"></i>Contact
+                                Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h3 class="text-warning mb-4">Our services</h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="warehousing.html"><i
+                                    class="fa fa-angle-right mr-2"></i>Warehousing &
+                                Distribution</a>
+                            <a class="text-white mb-2" href="cfs.html"><i class="fa fa-angle-right mr-2"></i>CFS</a>
+                            <a class="text-white mb-2" href="multitran.html"><i
+                                    class="fa fa-angle-right mr-2"></i>Multimodal
+                                Transportation</a>
+                            <a class="text-white" href="surfacetran.html"><i class="fa fa-angle-right mr-2"></i>Surface
+                                Transportation</a>
+                            <a class="text-white" href="logisticsolution.html"><i
+                                    class="fa fa-angle-right mr-2"></i>Logistics Solution</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 mb-5">
+                <!-- Video section -->
+                <div class="mb-4">
+                    <video width="100%" autoplay muted loop style="display: block; border: none;">
+                        <source src="img/animation-video.mp4" type="video/mp4">
+
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-2 px-sm-3 px-md-5"
+        style="border-color: #3E3E4E !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#">MiTRA Demo Logistics Pvt Ltd.</a>. All Rights Reserved.
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-warning back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contactus.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const unwantedElements = document.querySelectorAll('.unwanted-class'); // Change this to your actual class or ID
+            unwantedElements.forEach(function (element) {
+                element.classList.add('hide');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
